@@ -5,8 +5,7 @@ This is my personal digital portfolio hosted using GitHub Pages. It showcases my
 ---
 
 ## 🌐 Live Site
-https://akwaenn.github.io/
-
+https://akwaen.github.io/akwaenn.github.io/
 ---
 
 ## 📌 About
