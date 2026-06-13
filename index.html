@@ -12,69 +12,94 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            background-color: #f4f7fb;
-            color: #222;
-            line-height: 1.7;
-        }
-
         html {
             scroll-behavior: smooth;
         }
 
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f5f7fb;
+            color: #111;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
         header {
             background: linear-gradient(135deg, #0f172a, #1e3a8a);
             color: white;
+            padding: 80px 20px 40px;
             text-align: center;
-            padding: 80px 20px;
         }
 
         header h1 {
             font-size: 3rem;
-            margin-bottom: 10px;
         }
 
         header p {
+            margin-top: 10px;
             font-size: 1.2rem;
-            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .btns {
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            background: white;
+            color: #1e3a8a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #dbeafe;
+        }
+
+        nav {
+            margin-top: 25px;
         }
 
         nav a {
             color: white;
+            margin: 0 10px;
             text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 0.95rem;
         }
 
         nav a:hover {
             color: #93c5fd;
         }
 
+        /* LAYOUT */
         section {
             max-width: 1000px;
             margin: 30px auto;
             background: white;
-            padding: 35px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.06);
         }
 
         h2 {
             color: #1e3a8a;
-            margin-bottom: 15px;
             border-bottom: 3px solid #1e3a8a;
             display: inline-block;
-            padding-bottom: 5px;
+            margin-bottom: 15px;
         }
 
         h3 {
-            margin-top: 20px;
+            margin-top: 18px;
             color: #0f172a;
         }
 
         ul {
-            padding-left: 20px;
+            margin-left: 20px;
             margin-top: 10px;
         }
 
@@ -84,36 +109,35 @@
 
         a {
             color: #2563eb;
-            text-decoration: none;
         }
 
         a:hover {
             text-decoration: underline;
         }
 
-        .button {
-            display: inline-block;
-            background: white;
-            color: #1e3a8a;
-            padding: 10px 18px;
-            border-radius: 8px;
-            margin: 10px 5px;
-            font-weight: bold;
-            text-decoration: none;
+        /* CARDS */
+        .card {
+            border: 1px solid #e5e7eb;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 15px;
+            transition: 0.2s;
         }
 
-        .button:hover {
-            background: #dbeafe;
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         }
 
         footer {
+            text-align: center;
+            padding: 25px;
             background: #0f172a;
             color: white;
-            text-align: center;
-            padding: 20px;
             margin-top: 40px;
         }
 
+        /* MOBILE */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2rem;
@@ -121,11 +145,7 @@
 
             nav a {
                 display: block;
-                margin: 8px 0;
-            }
-
-            section {
-                margin: 15px;
+                margin: 6px 0;
             }
         }
     </style>
@@ -137,8 +157,10 @@
     <h1>Akwaeno George</h1>
     <p>Programmer • Tutor • Research Participant • Varsity Track Athlete</p>
 
-    <a class="button" href="https://github.com/Akwaen" target="_blank">GitHub</a>
-    <a class="button" href="https://www.linkedin.com/in/akwaeno-george-5b42b7377" target="_blank">LinkedIn</a>
+    <div class="btns">
+        <a class="btn" href="https://github.com/Akwaen" target="_blank">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/akwaeno-george-5b42b7377" target="_blank">LinkedIn</a>
+    </div>
 
     <nav>
         <a href="#about">About</a>
@@ -153,14 +175,11 @@
 
 <section id="about">
     <h2>About Me</h2>
-
     <p>
         Hello! My name is Akwaeno George. I am a high school student in San Diego with interests in computer science, mathematics, education, and athletics. I enjoy building projects in Python and Java, tutoring students, participating in research opportunities, and competing in track and field.
     </p>
 
-    <br>
-
-    <p>
+    <p style="margin-top:10px;">
         <strong>100m PR:</strong> 10.79 seconds |
         <strong>200m PR:</strong> 21.88 seconds
     </p>
@@ -192,13 +211,13 @@
 
 <section id="skills">
     <h2>Skills</h2>
-
     <ul>
         <li>Python</li>
         <li>Java</li>
         <li>HTML & CSS</li>
         <li>Calculus</li>
         <li>Statistics</li>
+        <li>Content Creation (Video Editing & Short-Form Media)</li>
         <li>Certified Peer Tutor</li>
         <li>Leadership & Communication</li>
         <li>Teamwork & Time Management</li>
@@ -208,44 +227,58 @@
 <section id="experience">
     <h2>Experience</h2>
 
-    <h3>TEACH-LEAD Student Intern | Hearst Elementary School</h3>
-    <ul>
-        <li>Assisted kindergarten students with classroom activities and educational technology.</li>
-        <li>Supported teachers with lesson implementation and classroom management.</li>
-        <li>Developed leadership, mentoring, and communication skills.</li>
-    </ul>
+    <div class="card">
+        <h3>TEACH-LEAD Student Intern | Hearst Elementary School</h3>
+        <ul>
+            <li>Assisted kindergarten students with classroom activities and educational technology.</li>
+            <li>Supported teachers with lesson implementation and classroom management.</li>
+            <li>Developed leadership, mentoring, and communication skills.</li>
+        </ul>
+    </div>
 
-    <h3>Thinkist Certified Peer Tutor | 2025</h3>
-    <ul>
-        <li>Completed 48 hours of tutor training and service.</li>
-        <li>Provided academic support and study strategies.</li>
-        <li>Earned certification through a district-supported educational program.</li>
-    </ul>
+    <div class="card">
+        <h3>Thinkist Certified Peer Tutor | 2025</h3>
+        <ul>
+            <li>Completed 48 hours of tutor training and service.</li>
+            <li>Provided academic support and study strategies.</li>
+            <li>Earned certification through a district-supported educational program.</li>
+        </ul>
+    </div>
 
-    <h3>Varsity Track & Field Athlete | 2022–2026</h3>
-    <ul>
-        <li>Four-year varsity sprinter specializing in the 100m and 200m.</li>
-        <li>Balanced athletics with AP and college coursework.</li>
-        <li>Developed discipline, consistency, and competitive mindset through structured training.</li>
-        <li>Documented training progression and competition journey through Instagram and TikTok.</li>
-    </ul>
+    <div class="card">
+        <h3>Varsity Track & Field Athlete | 2022–2026</h3>
+        <ul>
+            <li>Four-year varsity sprinter specializing in the 100m and 200m.</li>
+            <li>Balanced athletics with AP and college coursework.</li>
+            <li>Developed discipline, consistency, and competitive mindset through structured training.</li>
+            <li>Documented training progression and competition journey through Instagram and TikTok.</li>
+            <li>
+                Track content:
+                <a href="https://www.instagram.com/akwaenog/" target="_blank">Instagram</a> |
+                <a href="https://www.tiktok.com/@akwaeno" target="_blank">TikTok</a>
+            </li>
+        </ul>
+    </div>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
 
-    <h3>Task Management Application</h3>
-    <p>A Python project that helps users organize large projects into manageable daily tasks.</p>
-    <a href="https://github.com/Akwaen/Project" target="_blank">View Project</a>
+    <div class="card">
+        <h3>Task Management Application</h3>
+        <p>Python project that helps users organize large projects into manageable daily tasks.</p>
+        <a href="https://github.com/Akwaen/Project" target="_blank">View Project</a>
+    </div>
 
-    <h3>Track & Field Training Assistant</h3>
-    <p>A Python application designed to help athletes track workouts and performance goals.</p>
-    <a href="https://codehs.com/sandbox/id/python-3-Jwxf9F" target="_blank">View Project</a>
+    <div class="card">
+        <h3>Track & Field Training Assistant</h3>
+        <p>Python application designed to help athletes track workouts and performance goals.</p>
+        <a href="https://codehs.com/sandbox/id/python-3-Jwxf9F" target="_blank">View Project</a>
+    </div>
 </section>
 
 <section id="awards">
     <h2>Awards & Honors</h2>
-
     <ul>
         <li>Patrick Henry High School Track Athlete of the Year (2025)</li>
         <li>MileSplit San Diego All-City All-Junior Boys Team (2025)</li>
@@ -273,10 +306,16 @@
         GitHub:
         <a href="https://github.com/Akwaen" target="_blank">github.com/Akwaen</a>
     </p>
+
+    <p>
+        Social:
+        <a href="https://www.instagram.com/akwaenog/" target="_blank">Instagram</a> |
+        <a href="https://www.tiktok.com/@akwaeno" target="_blank">TikTok</a>
+    </p>
 </section>
 
 <footer>
-    <p>&copy; 2026 Akwaeno George. All Rights Reserved.</p>
+    <p>© 2026 Akwaeno George. All Rights Reserved.</p>
 </footer>
 
 </body>
